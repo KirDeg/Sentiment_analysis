@@ -185,7 +185,7 @@ def extracting_tweets():
     # Extracting filtered data from tweets.
     # for term in terms:
     for term in terms:
-        rule = gen_rule_payload("Garmin Vivoactive" + " lang:en " + "-has:links", results_per_call=RESULTS_PER_CALL,
+        rule = gen_rule_payload(f"{term}" + " lang:en " + "-has:links", results_per_call=RESULTS_PER_CALL,
                                 from_date=FROM_DATE, to_date=TO_DATE)
         tweets = collect_results(rule, max_results=MAX_RESULTS, result_stream_args=premium_search_args)
         j = 1
